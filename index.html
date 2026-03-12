@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover the Top AI Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero-section">
+        <h1 id="site-title">Discover the Top AI Tools</h1>
+        <p id="site-subtitle">Your guide to the world of Artificial Intelligence</p>
+        <div class="lang-switcher-container">
+            <div id="lang-switcher-dropdown">
+                <button id="lang-switcher-button">Language</button>
+                <div id="lang-switcher-options">
+                    <button data-lang="en">English</button>
+                    <button data-lang="ko">한국어</button>
+                    <button data-lang="ja">日本語</button>
+                    <button data-lang="zh">中文</button>
+                    <button data-lang="hi">हिन्दी</button>
+                    <button data-lang="es">Español</button>
+                    <button data-lang="fr">Français</button>
+                    <button data-lang="ar">العربية</button>
+                    <button data-lang="bn">বাংলা</button>
+                    <button data-lang="ru">Русский</button>
+                    <button data-lang="pt">Português</button>
+                    <button data-lang="ur">اردو</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="top-ai-section">
+            <h2 id="top-ai-title">Top 20 AI Overall</h2>
+            <div id="category-filters"></div>
+            <div id="top-ai-container">
+                <!-- Ranked AI cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="all-ai-section">
+            <h2 id="all-ais-title">All AI Tools</h2>
+            <div id="search-container">
+                <input type="text" id="search-bar" placeholder="Search for an AI...">
+            </div>
+            <div id="ai-container">
+                <!-- All AI cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js" type="module"></script>
+    <script src="ai-card.js" type="module"></script>
+</body>
+</html>
