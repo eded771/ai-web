@@ -1,229 +1,49 @@
-/* General Body Styles */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    background-color: #f0f2f5;
-    color: #1c1e21;
-}
-
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    position: relative; /* For positioning the language switcher */
-}
-
-#site-title {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-#site-subtitle {
-    margin: 10px 0 0;
-    font-size: 1.25rem;
-    opacity: 0.9;
-}
-
-/* Language Switcher */
-.lang-switcher-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-#lang-switcher-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-#lang-switcher-button {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#lang-switcher-button:hover, #lang-switcher-button:focus {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-#lang-switcher-options {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 8px;
-    padding: 5px 0;
-}
-
-#lang-switcher-options button {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-#lang-switcher-options button:hover {
-    background-color: #f1f1f1;
-}
-
-#lang-switcher-dropdown:hover #lang-switcher-options {
-    display: block;
-}
-
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-section {
-    background-color: white;
-    border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-h2 {
-    font-size: 1.75rem;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
     color: #333;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+    padding: 2em;
 }
 
-/* Category Filters */
-#category-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.category-filter-button {
-    background-color: #e4e6eb;
-    color: #333;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.category-filter-button:hover {
-    background-color: #d8dbe0;
-}
-
-.category-filter-button.active {
-    background-color: #1877f2;
-    color: white;
-}
-
-/* Top AI Container - Ranked Cards */
-#top-ai-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 20px;
-    justify-content: center;
-}
-
-.ranked-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    width: calc(50% - 40px); /* Two columns layout */
-    min-width: 300px; /* Minimum width for smaller screens */
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.ranked-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.rank-number {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #6e8efb;
-    margin-right: 15px;
-    min-width: 30px;
+h1 {
     text-align: center;
 }
 
-.ranked-card-content h3 {
-    margin: 0 0 5px 0;
-    font-size: 1.1rem;
+#categories,
+#tools {
+    list-style-type: none;
+    padding: 0;
+    margin: 2em auto;
+    max-width: 600px;
 }
 
-.ranked-card-content p {
-    margin: 0;
-    color: #65676b;
-    font-size: 0.9rem;
+#categories li,
+#tools li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-
-/* Search Bar */
-#search-container {
-    margin-bottom: 25px;
+#categories li:hover {
+    background-color: #e9e9e9;
 }
 
-#search-bar {
-    width: 100%;
-    padding: 15px;
-    font-size: 1rem;
-    border: 1px solid #dddfe2;
-    border-radius: 8px;
-    box-sizing: border-box;
+#tools h2 {
+    text-align: center;
+    margin-bottom: 1em;
 }
 
-/* All AI Container - ai-card Web Component */
-#ai-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.ai-card-link {
-    text-decoration: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #site-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-section {
-        padding: 50px 15px;
-    }
-
-    .ranked-card {
-        width: calc(100% - 30px); /* Single column layout */
-    }
+#back-button {
+    display: block;
+    margin: 2em auto;
+    padding: 0.8em 1.5em;
+    cursor: pointer;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }
