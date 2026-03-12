@@ -13,7 +13,7 @@ The website will have a modern, clean, and visually appealing design.
 *   **Ranked Cards:** The top 20 cards are compact, clickable links that take the user to the AI's website. They prominently display the rank number, AI name, and category.
 *   **Color Palette:** A vibrant and energetic color palette will be used, with a focus on blues, purples, and greens.
 *   **Typography:** Expressive and easy-to-read fonts will be used to create a clear visual hierarchy.
-*   **Interactivity:** Interactive elements have a "glow" effect and subtle animations. Cards have a lifted appearance with soft, deep shadows.
+*   **Interactivity:** Interactive elements have a "glow" effect and subtle animations. Cards have a lifted appearance with soft, deep shadows and a 3D tilt effect on hover.
 *   **Texture:** A subtle noise texture will be applied to the main background to add a premium, tactile feel.
 
 ## Features
@@ -25,13 +25,15 @@ The website will have a modern, clean, and visually appealing design.
 *   **Search and Filtering:** Users can search for specific AIs.
 *   **Multi-language Support:** The website content is available in 12 languages.
 
+## Completed Plans
+
+*   **Phase 11: Finalize Multilingual Support**
+    *   **`main.js` & `index.html`:** Corrected translation errors and added full support for 12 languages in the UI.
+
 ## Current Plan
 
-*   **Phase 9: Add Category Filters**
-    1.  **Update `index.html`:** Add a container for the category filter buttons above the daily ranking grid.
-    2.  **Update `style.css`:** Add styling for the filter buttons, including active and hover states.
-    3.  **Update `main.js`:** 
-        *   Define the list of categories.
-        *   Create and render the filter buttons.
-        *   Implement the filtering logic. When a button is clicked, filter the AI list by that category and re-render the ranking grid.
-        *   Add an "All" button to show all AIs.
+*   **Phase 12: Translate AI Categories**
+    1.  **Restructure `ai_data.json`:** Create a new top-level `categories` object to hold translations for each category name. Update the `ai_tools` array to reference these categories via a `category_key`.
+    2.  **Update `main.js`:** Modify the logic to fetch the new data structure. The `createCategoryFilters` function will now use the `categories` object and the current language to create translated filter buttons.
+    3.  **Update `ai-card.js`:** Adjust the `AiCard` component to correctly display the translated category name passed from `main.js`.
+    4.  **Update `main.js`:** Ensure that switching the language dynamically updates the category filter buttons and the category names visible on the AI cards.
